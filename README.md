@@ -1,3 +1,8 @@
+#Tugas 4_Kelompok 8
+- Mila Lestari (2208107010054)
+- Widya Nurul Sukma (2208107010054)
+- Pryta Rosela (2208107010046)
+
 # Movie API
 
 A simple RESTful API for movie data management, built with Express and TypeScript.
