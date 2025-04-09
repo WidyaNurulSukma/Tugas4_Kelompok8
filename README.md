@@ -141,16 +141,6 @@ movie-api/
 └── tsconfig.json
 ```
 
-## Future Improvements
-
-- Add a real database (MongoDB, PostgreSQL, etc.)
-- Implement user authentication
-- Add pagination for large datasets
-- Implement comprehensive input validation
-- Add unit and integration tests
-- Create a Swagger/OpenAPI documentation
-- Deploy to a cloud provider
-
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
