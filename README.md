@@ -1,7 +1,7 @@
 # Tugas 4_Kelompok 8
 - Mila Lestari (2208107010002)
 - Pryta Rosela (2208107010046)
-- - Widya Nurul Sukma (2208107010054)
+- Widya Nurul Sukma (2208107010054)
 
 # Movie API
 
