@@ -55,3 +55,55 @@ router.post('/', (req: Request, res: Response) => {
   }
 });
 
+// PUT - Mengupdate film (untuk nilai plus)
+router.put('/:id', (req: Request, res: Response) => {
+    try {
+      const id = parseInt(req.params.id);
+      const updatedMovie = updateMovie(id, req.body);
+      
+      if (!updatedMovie) {
+        return res.status(404).json({ message: 'Film tidak ditemukan' });
+      }
+      
+      res.json({ message: 'Film berhasil diupdate', data: updatedMovie });
+    } catch (error) {
+      res.status(500).json({ message: 'Terjadi kesalahan server' });
+    }
+  });
+  
+  // DELETE - Menghapus film (untuk nilai plus)
+  router.delete('/:id', (req: Request, res: Response) => {
+    try {
+      const id = parseInt(req.params.id);
+      const deleted = deleteMovie(id);
+      
+      if (!deleted) {
+        return res.status(404).json({ message: 'Film tidak ditemukan' });
+      }
+      
+      res.json({ message: 'Film berhasil dihapus' });
+    } catch (error) {
+      res.status(500).json({ message: 'Terjadi kesalahan server' });
+    }
+  });
+  
+  // GET - Mencari film berdasarkan kata kunci (untuk nilai plus)
+  router.get('/search/:query', (req: Request, res: Response) => {
+    const query = req.params.query;
+    const movies = searchMovies(query);
+    res.json({ data: movies });
+  });
+  
+  // GET - Filter film berdasarkan rating minimum (untuk nilai plus)
+  router.get('/filter/rating/:rating', (req: Request, res: Response) => {
+    const minRating = parseFloat(req.params.rating);
+    
+    if (isNaN(minRating)) {
+      return res.status(400).json({ message: 'Rating harus berupa angka' });
+    }
+    
+    const movies = getMoviesByMinRating(minRating);
+    res.json({ data: movies });
+  });
+  
+  export default router;
