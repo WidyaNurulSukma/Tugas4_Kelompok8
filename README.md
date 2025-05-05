@@ -62,8 +62,8 @@ Each movie has the following attributes:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/movie-api.git
-cd movie-api
+git clone https://github.com/WidyaNurulSukma/Tugas4_Kelompok8.git
+cd Tugas4_Kelompok8
 ```
 
 2. Install dependencies:
